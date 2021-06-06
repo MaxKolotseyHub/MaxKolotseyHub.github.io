@@ -173,14 +173,33 @@ color: rgb(163, 66, 36);
         display: flex;
         flex-direction: column;
         height: 100vh;
+        position: relative;
     }
 
     .dashboard{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .avatar img{
         width: 5rem;
     }
 
+    .info {
+        background: rgba(16, 16, 16, 1);
+        border-radius: 0;
+    }
+
+    .glass{
+        border-radius: 0;
+        background: none;
+    }
+
+    .dashboard{
+        padding-bottom: 1rem;
+        position: sticky;
+        top: 0;
+    background: rgba(39, 39, 39, 0.8);
+
+    }
 }
