@@ -16,7 +16,6 @@ main{
 }
 
 .glass{
-    min-width: 640px;
     width: 60%;
     height: 80%;
     background: rgba(39, 39, 39, 0.4);
@@ -206,6 +205,8 @@ color: rgb(163, 66, 36);
         flex-direction: column;
         height: 100vh;
         position: relative;
+        border-radius: 0;
+        background: none;
     }
 
     .dashboard{
@@ -220,11 +221,6 @@ color: rgb(163, 66, 36);
     .info {
         background: rgba(16, 16, 16, 1);
         border-radius: 0;
-    }
-
-    .glass{
-        border-radius: 0;
-        background: none;
     }
 
     .dashboard{
