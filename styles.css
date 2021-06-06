@@ -305,6 +305,10 @@ color: rgb(163, 66, 36);
         background: rgba(16, 16, 16, 1);
         border-radius: 0;
     }
+    .info .tab{
+        background: rgba(30,30,30, 0.8);
+        border-radius: 0%;
+    }
 
     .dashboard{
         padding-bottom: 1rem;
