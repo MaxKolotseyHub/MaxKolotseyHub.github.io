@@ -8,13 +8,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;600&family=Zilla+Slab:wght@500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <main>
         <section class="glass">
             <div class="dashboard">
+                <div class="controls">
+                    <div class="close btn" onclick="showPopUp()"></div>
+                    <div class="minimize btn" onclick="showPopUp()"></div>
+                    <div class="maximize btn" onclick="showPopUp()"></div>
+                </div>
                 <div class="avatar">
                     <img src="./avatar.jpg" alt="">
                     <h2>Kolotsey Max</h2>
@@ -29,11 +36,7 @@
                         <img src="./github.png" alt="">
                         <h3>Github</h3>
                     </a>
-<!-- 
-                    <a href="" class="link">
-                        <img src="./instagram.png" alt="">
-                        <h3>Instagram</h3>
-                    </a> -->
+
                 </div>
                 <div class="email">
                     <h4>kolotseymaxwork@gmail.com</h4>
@@ -91,8 +94,33 @@
         <div class="blik4"></div>
         <div class="blik5"></div>
         <div class="blik6"></div>
-        <div class="blik7"></div>
+        <div id="popup"></div>
     </main>
+    <script>
+        let counter = 0;
+        function showPopUp() {
+            const messages = [
+                "Sorry, but it isn't a real window, actually... :D",
+                "Man, it doesn't make any sense..",
+                "Why are you keep doing this?",
+                "Really, stop it, please...",
+                "Oh dear..."
+            ]
+            const popup = document.getElementById('popup');
+            popup.innerText = messages[counter];
+            popup.addEventListener("animationend", hidePopup, false);
+            popup.setAttribute('style', 'display:block;');
+            popup.className = 'popup';
+        }
+
+        function hidePopup() {
+            const popup = document.getElementById('popup');
+            popup.setAttribute('style', 'display:none;');
+            popup.className = '';
+            if (counter < 4)
+                counter++;
+        }
+    </script>
 </body>
 
 </html>
