@@ -17,7 +17,7 @@ main{
 
 .glass{
     width: 60%;
-    height: auto;
+    height: 80%;
     background: rgba(39, 39, 39, 0.4);
     border-radius: 2rem;
     display: flex;
@@ -40,6 +40,10 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.info pre{
+    overflow-y: auto;
 }
 
 .info .tab{
@@ -160,4 +164,23 @@ color: rgb(163, 66, 36);
     height: 2px;
     border-radius: 50%;
     animation: blik 8.5s linear infinite;
+}
+
+@media (max-width: 900px) {
+    
+    .glass{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .dashboard{
+        flex-direction: row;
+    }
+
+    .avatar img{
+        width: 5rem;
+    }
+
 }
