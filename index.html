@@ -36,6 +36,8 @@
                         <img src="./github.png" alt="">
                         <h3>Github</h3>
                     </a>
+                    <div class="parser" onclick="parse()" id="parser">Parse</div>
+
                 </div>
                 <div class="email">
                     <h4>kolotseymaxwork@gmail.com</h4>
@@ -51,7 +53,8 @@
                     </div>
                 </div>
                 <div class="description">
-                    <pre><code>{
+                    <div class="unparsed" id="unparsed">
+                        <pre><code>{
     <span class="json-key">"skills":</span> [
         <span class="json-value">C#</span>,
         <span class="json-value">ASP.NET</span>, 
@@ -66,7 +69,7 @@
     <span class="json-key">"languages"</span>: [
         {
             <span class="json-key">"title"</span>:<span class="json-string"> "English"</span>,
-            <span class="json-key">"level"</span>:<span class="json-string"> "B1+"</span>
+            <span class="json-key">"level"</span>:<span class="json-string"> "B2"</span>
         }
     ],
     <span class="json-key">"tools"</span>: [
@@ -74,7 +77,9 @@
         <span class="json-value">Visual Studio Code</span>, 
         <span class="json-value">SSMS</span>,
         <span class="json-value">Postman</span>,
-        <span class="json-value">Fiddler</span> 
+        <span class="json-value">Fiddler</span> ,
+        <span class="json-value">SourceTree</span> ,
+        <span class="json-value">AzureDevOps</span> 
     ],
     <span class="json-key">"education"</span>:<span class="json-string"> "Master degree"</span>,
     <span class="json-key">"experience"</span>: [
@@ -92,8 +97,39 @@
         }
     ]
 }</code>
-</div>
                 </pre>
+                    </div>
+                    <div class="parsed hide" id="parsed">
+                        <div class="pair">
+                            <div class="title">Skills:</div>
+                            <div class="values">C#, Asp.Net, TypeScript, Angular, HTML, CSS, SQL, Git, TFS </div>
+                        </div>
+                        <div class="pair">
+                            <div class="title">Languages:</div>
+                            <div class="values">English: B2</div>
+                        </div>
+                        <div class="pair">
+                            <div class="title">Tools:</div>
+                            <div class="values">Visual Studio, Visual Studio Code, SSMS, Postman, Fiddler, SourceTree,
+                                AzureDevOps</div>
+                        </div>
+                        <div class="pair">
+                            <div class="title">Education:</div>
+                            <div class="values">Master degree</div>
+                        </div>
+                        <div class="pair">
+                            <div class="title">Experience:</div>
+                            <div class="values">
+                                <p>Alfa Bank (2018-2020)</p>
+                                <p>.Net Developer</p>
+                                <p> Project domain: RPA</p>
+                                </br>
+                                <p>Lightpoint Global (2020 - Now)</p>
+                                <p> .Net Developer</p>
+                                <p>Project domain: Publishing</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="footer"></div>
                 </div>
         </section>
@@ -106,7 +142,25 @@
         <div id="popup"></div>
     </main>
     <script>
+        function parse() {
+            const unparsed = document.getElementById('unparsed');
+            const parsed = document.getElementById('parsed');
+            const parser = document.getElementById('parser');
+
+            if (isParsed) {
+                parsed.classList.add('hide');
+                unparsed.classList.remove('hide');
+                parser.innerText = 'Parse';
+            } else {
+                parsed.classList.remove('hide');
+                unparsed.classList.add('hide');
+                parser.innerText = 'Unparse';
+            }
+            isParsed = !isParsed;
+        }
+
         let counter = 0;
+        let isParsed = false;
         function showPopUp() {
             const messages = [
                 "Sorry, but it isn't a real window, actually... :D",

@@ -5,9 +5,9 @@
     font-weight: 300;
 }
 
-main{
+main {
     height: 100vh;
-    background:#0a0a0a;
+    background: #0a0a0a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,73 +15,75 @@ main{
     overflow-y: hidden;
 }
 
-.glass{
-    width: auto;
+.glass {
     height: 80%;
     background: rgba(39, 39, 39, 0.4);
     border-radius: 1rem;
     display: flex;
 }
 
-.dashboard{
+.dashboard {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
     position: relative;
+    max-width: 225px;
 }
 
-.controls{
+.controls {
     position: absolute;
     top: 2.5%;
-    left:6.5%;
+    left: 6.5%;
     width: 30%;
     display: flex;
     justify-content: space-between;
 }
 
-.btn{
+.btn {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
     opacity: 0.75;
 }
 
-.close{
+.close {
     background-color: #D3433F;
 }
 
-.minimize{
+.minimize {
     background-color: #D3C33F;
 }
 
-.maximize{
+.maximize {
     background-color: #3FD34F;
 }
 
-.email{
+.email {
     padding: 1rem;
 }
 
-.info{
-    flex:2;
+.info {
+    flex: 2;
     background: rgba(16, 16, 16, 0.5);
-    border-radius: 0rem 1rem 1rem 0rem ;
+    border-radius: 0rem 1rem 1rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: space-e;
+    max-width: 550px;
+    position: relative;
 }
 
-.tab-title{
+.tab-title {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     padding-left: 1rem;
 }
 
-.description{
+.description {
     overflow-y: auto;
     font-family: 'Roboto Mono', monospace;
     padding: 1rem;
@@ -89,37 +91,39 @@ main{
     font-size: 16px;
 }
 
-.footer{
+.footer {
     height: 2rem;
 }
-.info .tab{
+
+.info .tab {
     border-radius: 0rem 1rem 0rem 0rem;
     width: 100%;
-    background: rgba(16, 16, 16, 1);;
+    background: rgba(16, 16, 16, 1);
+    ;
     padding: 0.5rem 0rem 0.5rem 0rem;
 }
 
-.avatar{
+.avatar {
     padding: 1rem;
 }
 
-.avatar img{
+.avatar img {
     border-radius: 50%;
     background-size: cover;
     width: 10rem;
     box-shadow: 0rem 0rem 1rem 0.1rem rgba(0, 0, 0, 0.25);
 }
 
-.links img{
+.links img {
     width: 1.5rem;
     padding-right: 0.5rem;
 }
 
-.links a{
+.links a {
     text-decoration: none;
 }
 
-.links a::selection{
+.links a::selection {
     text-decoration: none;
 }
 
@@ -130,24 +134,24 @@ main{
 }
 
 .json-key {
-color: rgb(165, 106, 42);
+    color: rgb(165, 106, 42);
 }
 
 .json-value {
-color: rgb(60, 109, 155);
+    color: rgb(60, 109, 155);
 }
 
 .json-string {
-color: rgb(163, 66, 36);
+    color: rgb(163, 66, 36);
 }
 
 @keyframes blik {
-    50%{
+    50% {
         opacity: 0;
     }
 }
 
-.blik1{
+.blik1 {
     position: absolute;
     top: 15%;
     left: 10%;
@@ -158,7 +162,7 @@ color: rgb(163, 66, 36);
     animation: blik 5s linear infinite;
 }
 
-.blik2{
+.blik2 {
     position: absolute;
     right: 5%;
     bottom: 10%;
@@ -169,7 +173,7 @@ color: rgb(163, 66, 36);
     animation: blik 7s linear infinite;
 }
 
-.blik3{
+.blik3 {
     position: absolute;
     left: 5%;
     bottom: 35%;
@@ -180,7 +184,7 @@ color: rgb(163, 66, 36);
     animation: blik 3s linear infinite;
 }
 
-.blik4{
+.blik4 {
     position: absolute;
     right: 10%;
     top: 25%;
@@ -191,7 +195,7 @@ color: rgb(163, 66, 36);
     animation: blik 2.5s linear infinite;
 }
 
-.blik5{
+.blik5 {
     position: absolute;
     right: 40%;
     top: 5%;
@@ -202,7 +206,7 @@ color: rgb(163, 66, 36);
     animation: blik 4.5s linear infinite;
 }
 
-.blik6{
+.blik6 {
     position: absolute;
     left: 45%;
     bottom: 5%;
@@ -214,16 +218,16 @@ color: rgb(163, 66, 36);
 }
 
 @keyframes show-popup {
-    50%{
+    50% {
         bottom: 15%;
     }
 
-    100%{
+    100% {
         bottom: -15%;
     }
 }
 
-.popup{
+.popup {
     font-family: 'Zilla Slab', serif;
     font-weight: 300;
     font-size: 20px;
@@ -233,48 +237,91 @@ color: rgb(163, 66, 36);
     border: 1px solid gray;
     border-radius: 0.5rem;
     background: rgba(39, 39, 39, 0.6);
-    animation: show-popup 3.5s cubic-bezier(0.1,1 , 0, 1) 1;
+    animation: show-popup 3.5s cubic-bezier(0.1, 1, 0, 1) 1;
     color: rgb(150, 148, 148);
 }
 
-#popup{
+#popup {
     display: none;
 }
 
-.scrollbar{
-	margin-left: 30px;
-	float: left;
-	height: 300px;
-	width: 35px;
-	background: #F5F5F5;
-	overflow-y: scroll;
-	margin-bottom: 25px;
+.scrollbar {
+    margin-left: 30px;
+    float: left;
+    height: 300px;
+    width: 35px;
+    background: #F5F5F5;
+    overflow-y: scroll;
+    margin-bottom: 25px;
 }
 
-.description::-webkit-scrollbar-track{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #615d5d;
+.description::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #615d5d;
 }
 
-.description::-webkit-scrollbar{
-	width: 10px;
-	background-color: #4d4d4d;
+.description::-webkit-scrollbar {
+    width: 10px;
+    background-color: #4d4d4d;
 }
 
-.description::-webkit-scrollbar-thumb{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgb(79, 78, 78);
+.description::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(79, 78, 78);
+}
+
+.unparsed {
+    display: block;
+}
+
+.parsed {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+    font-weight: 300;
+}
+
+.pair {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.pair>.title {
+    min-width: 6rem;
+    font-weight: 400;
+    color: rgb(165, 106, 42);
+
+}
+
+.pair>.values {
+    width: auto;
+}
+
+.parser {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 25px;
+    padding: 5px 0;
+    background-color: rgb(20, 115, 200);
+    color: #F5F5F5;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
 }
 
 @media (max-width: 900px) {
-    
-    main{
+
+    main {
         overflow-y: auto;
     }
-    
-    .glass{
+
+    .glass {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -284,20 +331,24 @@ color: rgb(163, 66, 36);
         background: none;
     }
 
-    .dashboard{
+    .dashboard {
         flex-direction: row;
         flex-wrap: wrap;
+        max-width: 100%;
     }
 
-    .controls{
+    .info{
+        max-width: 100%;
+    }
+    .controls {
         display: none;
     }
 
-    .avatar{
-        padding:1rem;
+    .avatar {
+        padding: 1rem;
     }
 
-    .avatar img{
+    .avatar img {
         width: 5rem;
     }
 
@@ -305,16 +356,17 @@ color: rgb(163, 66, 36);
         background: rgba(16, 16, 16, 1);
         border-radius: 0;
     }
-    .info .tab{
-        background: rgba(30,30,30, 0.8);
+
+    .info .tab {
+        background: rgba(30, 30, 30, 0.8);
         border-radius: 0%;
     }
 
-    .dashboard{
+    .dashboard {
         padding-bottom: 1rem;
         position: sticky;
         top: 0;
-    background: rgba(39, 39, 39, 0.8);
+        background: rgba(39, 39, 39, 0.8);
 
     }
 }
