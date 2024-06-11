@@ -217,32 +217,35 @@ main {
     animation: blik 8.5s linear infinite;
 }
 
-@keyframes show-popup {
-    50% {
-        bottom: 15%;
-    }
-
-    100% {
-        bottom: -15%;
-    }
-}
-
 .popup {
     font-family: 'Zilla Slab', serif;
     font-weight: 300;
-    font-size: 20px;
-    position: absolute;
-    bottom: -5%;
     padding: 1.5rem;
+    margin-bottom: 5px;
+    font-size: 20px;
     border: 1px solid gray;
     border-radius: 0.5rem;
-    background: rgba(39, 39, 39, 0.6);
-    animation: show-popup 3.5s cubic-bezier(0.1, 1, 0, 1) 1;
+    background: rgba(39, 39, 39, 0.7);
     color: rgb(150, 148, 148);
 }
 
-#popup {
-    display: none;
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    7% { opacity: 1; }
+    93% {opacity: 1;}
+    100% { opacity: 0;}
+}
+
+.fade-in {
+    animation: fadeIn 3.5s ease-in-out;
+}
+
+#popup-container{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    min-height: 5%;
+    width: 20%;
 }
 
 .scrollbar {

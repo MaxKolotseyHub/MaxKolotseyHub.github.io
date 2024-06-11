@@ -163,7 +163,7 @@
         <div class="blik4"></div>
         <div class="blik5"></div>
         <div class="blik6"></div>
-        <div id="popup"></div>
+        <div id="popup-container"></div>
     </main>
     <script>
         function parse () {
@@ -193,19 +193,24 @@
                 "Really, stop it, please...",
                 "Oh dear..."
             ]
-            const popup = document.getElementById('popup');
-            popup.innerText = messages[counter];
-            popup.addEventListener("animationend", hidePopup, false);
-            popup.setAttribute('style', 'display:block;');
-            popup.className = 'popup';
+           createPopup(messages[counter]);
+           if (counter < 4)
+                counter++;
         }
 
-        function hidePopup () {
-            const popup = document.getElementById('popup');
-            popup.setAttribute('style', 'display:none;');
-            popup.className = '';
-            if (counter < 4)
-                counter++;
+        const createPopup = (message) => {
+            const popupContainer = document.getElementById('popup-container');
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = message;
+            popupContainer.appendChild(popup);
+            requestAnimationFrame(() => {
+                popup.classList.add('fade-in');
+            });
+            setTimeout(() => {
+                popup.remove();
+                popup = null;
+            }, 3500);
         }
     </script>
 </body>
