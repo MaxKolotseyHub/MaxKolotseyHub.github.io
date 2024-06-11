@@ -58,9 +58,10 @@
     <span class="json-key">"skills":</span> [
         <span class="json-value">"C#"</span>,
         <span class="json-value">"ASP.NET"</span>, 
-        <span class="json-value">".NET Core"</span>, 
+        <span class="json-value">".NET6/7"</span>, 
         <span class="json-value">"TypeScript"</span>,
         <span class="json-value">"Angular"</span>, 
+        <span class="json-value">"React"</span>, 
         <span class="json-value">"HTML"</span>, 
         <span class="json-value">"CSS"</span>, 
         <span class="json-value">"SQL"</span>, 
@@ -81,14 +82,21 @@
         <span class="json-value">"Fiddler"</span>,
         <span class="json-value">"SourceTree"</span>,
         <span class="json-value">"AzureDevOps"</span> 
+        <span class="json-value">"Azure Portal"</span> 
     ],
     <span class="json-key">"education"</span>:<span class="json-string"> "Master degree"</span>,
     <span class="json-key">"experience"</span>: [
         {
+            <span class="json-key">"company"</span>:<span class="json-string"> "Sideways6"</span>,
+            <span class="json-key">"position"</span>:<span class="json-string"> ".Net developer"</span>,
+            <span class="json-key">"project_domain"</span>:<span class="json-string"> "Ideas"</span>,
+            <span class="json-key">"period"</span>:<span class="json-string"> "2024 - now"</span>
+        },
+        {
             <span class="json-key">"company"</span>:<span class="json-string"> "SiliconMint"</span>,
             <span class="json-key">"position"</span>:<span class="json-string"> ".Net developer"</span>,
             <span class="json-key">"project_domain"</span>:<span class="json-string"> "Fintech"</span>,
-            <span class="json-key">"period"</span>:<span class="json-string"> "2022 - now"</span>
+            <span class="json-key">"period"</span>:<span class="json-string"> "2022 - 2024"</span>
         },
         {
             <span class="json-key">"company"</span>:<span class="json-string"> "Lightpoint Global"</span>,
@@ -110,7 +118,7 @@
                     <div class="parsed hide" id="parsed">
                         <div class="pair">
                             <div class="title">Skills:</div>
-                            <div class="values">C#, Asp.Net, .NET Core, TypeScript, Angular, HTML, CSS, SQL, Git, Azure </div>
+                            <div class="values">C#, Asp.Net, .NET6/7, TypeScript, Angular, React, HTML, CSS, SQL, Git, Azure </div>
                         </div>
                         <div class="pair">
                             <div class="title">Languages:</div>
@@ -119,7 +127,7 @@
                         <div class="pair">
                             <div class="title">Tools:</div>
                             <div class="values">Visual Studio, Visual Studio Code, SSMS, Postman, Fiddler, SourceTree,
-                                AzureDevOps</div>
+                                AzureDevOps, Azure Portal</div>
                         </div>
                         <div class="pair">
                             <div class="title">Education:</div>
@@ -127,8 +135,12 @@
                         </div>
                         <div class="pair">
                             <div class="title">Experience:</div>
-                            <div class="values">
-                                <p>SiliconMint (2022 - Now)</p>
+                            <div class="values">                                
+                                <p>Sideways6 (2024 - Now)</p>
+                                <p>.Net Developer</p>
+                                <p>Project domain: Ideas</p>
+                                </br>
+                                <p>SiliconMint (2022 - 2024)</p>
                                 <p>.Net Developer</p>
                                 <p>Project domain: Fintech</p>
                                 </br>
@@ -154,7 +166,7 @@
         <div id="popup"></div>
     </main>
     <script>
-        function parse() {
+        function parse () {
             const unparsed = document.getElementById('unparsed');
             const parsed = document.getElementById('parsed');
             const parser = document.getElementById('parser');
@@ -173,7 +185,7 @@
 
         let counter = 0;
         let isParsed = false;
-        function showPopUp() {
+        function showPopUp () {
             const messages = [
                 "Sorry, but it isn't a real window, actually... :D",
                 "Man, it doesn't make any sense..",
@@ -188,7 +200,7 @@
             popup.className = 'popup';
         }
 
-        function hidePopup() {
+        function hidePopup () {
             const popup = document.getElementById('popup');
             popup.setAttribute('style', 'display:none;');
             popup.className = '';
