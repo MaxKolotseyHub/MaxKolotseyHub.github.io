@@ -231,13 +231,13 @@ main {
 
 @keyframes fadeIn {
     0% {opacity: 0;}
-    7% { opacity: 1; }
-    93% {opacity: 1;}
+    10% { opacity: 1; }
+    90% {opacity: 1;}
     100% { opacity: 0;}
 }
 
 .fade-in {
-    animation: fadeIn 3.5s ease-in-out;
+    animation: fadeIn 3.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #popup-container{
